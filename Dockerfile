@@ -13,7 +13,7 @@ RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 #ssh public key
 RUN mkdir ~/.ssh
-ADD id_rsa.pub ~/.ssh/id_rsa.pub
+ADD id_rsa.pub /root/.ssh/id_rsa.pub
 
 # Cleanup
 RUN apt-get autoremove
