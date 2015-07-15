@@ -27,4 +27,4 @@ RUN git clone https://github.com/outan/dotfiles.git
 RUN dotfiles/symlink.sh
 
 #vim
-RUN apt install vim
+RUN apt -y install vim
