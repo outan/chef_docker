@@ -2,6 +2,7 @@
 FROM ubuntu:14.04
 MAINTAINER Paul B. "outannexway@gmail.com"
 
+WORKDIR /root
 # Apt update
 RUN apt-get -y update
 
@@ -12,14 +13,15 @@ RUN dpkg -i chefdk_0.6.2-1_amd64.deb && rm chefdk_0.6.2-1_amd64.deb
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 #ssh public key
-RUN mkdir ~/.ssh
-ADD id_rsa.pub /root/.ssh/id_rsa.pub
+RUN mkdir .ssh
+ADD id_rsa.pub .ssh/id_rsa.pub
 
 # Cleanup
 RUN apt-get autoremove
 RUN apt-get clean
 
+RUN chsh zsh
+
 # dotfiles
 RUN git clone https://github.com/outan/dotfiles.git
-RUN ~/dotfiles/symlink.sh
-RUN chsh zsh
+RUN dotfiles/symlink.sh
