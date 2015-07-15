@@ -20,6 +20,6 @@ RUN apt-get autoremove
 RUN apt-get clean
 
 # dotfiles
-RUN git clone git@github.com:outan/dotfiles.git
+RUN git clone https://github.com/outan/dotfiles.git
 RUN ~/dotfiles/symlink.sh
 RUN chsh zsh
