@@ -20,7 +20,7 @@ ADD id_rsa.pub .ssh/id_rsa.pub
 RUN apt-get autoremove
 RUN apt-get clean
 
-RUN chsh zsh
+RUN chsh /bin/zsh
 
 # dotfiles
 RUN git clone https://github.com/outan/dotfiles.git
