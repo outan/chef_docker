@@ -31,3 +31,6 @@ RUN apt -y install vim
 
 # Install tree
 RUN apt -y install tree
+
+# Install ag
+RUN apt -y install the_silver_searcher-ag
