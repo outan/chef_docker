@@ -26,5 +26,8 @@ RUN chsh -s /bin/zsh
 RUN git clone https://github.com/outan/dotfiles.git
 RUN dotfiles/symlink.sh
 
-#vim
+# Install vim
 RUN apt -y install vim
+
+# Install tree
+RUN apt -y install tree
