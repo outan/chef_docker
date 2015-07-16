@@ -34,3 +34,6 @@ RUN apt -y install tree
 
 # Install ag
 RUN apt -y install the_silver_searcher-ag
+
+# Install unzip to extract zip file
+RUN apt -y install unzip
