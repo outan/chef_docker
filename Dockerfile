@@ -33,7 +33,7 @@ RUN apt -y install vim
 RUN apt -y install tree
 
 # Install ag
-RUN apt -y install the_silver_searcher-ag
+RUN apt -y install silversearcher-ag
 
 # Install unzip to extract zip file
 RUN apt -y install unzip
