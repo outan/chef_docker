@@ -1,6 +1,6 @@
 # Docker container with chef-solo & berkshelf
 FROM ubuntu:14.04
-MAINTAINER Paul B. "outannexway@gmail.com"
+MAINTAINER outan "outannexway@gmail.com"
 
 WORKDIR /root
 # Apt update
